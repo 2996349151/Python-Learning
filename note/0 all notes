@@ -74,7 +74,7 @@ or "print("\"Let\'s go!\""))
 21   pow(x,y) == x**y
      pow(x,y,z) == x**y%z
 
-22   The answer is false when "None", "False", "value is 0" ,"empty".
+22   The answer is false when "None", "False", "value is 0" ,"empty". 
 (such as "bool(" ") == True" or "bool("") == False")
 
 23   "and" and "or" obey short rule, which means from left to right, 
@@ -98,4 +98,5 @@ or "print("\"Let\'s go!\""))
      if "break" is executed.
 
 28   
+
 2023/9/26
