@@ -46,7 +46,6 @@ or "print("\"Let\'s go!\""))
      or use "*" to repeat a string many times.
 (such as "'520'+'1314'" or ""I love you!\n"*100")
 
-********************
 13   The computing answer of floating point numbers is not accurate, 
      unlike integers.
 (can be solved by "x = decimal.Decimal('0.1')")
@@ -88,3 +87,5 @@ or "print("\"Let\'s go!\""))
      < "**" < "await" < "x[index]" < "(expressions...)"
 
 25   Draw flow charts or mind maps before programming.
+
+2023/9/26
