@@ -75,4 +75,7 @@ or "print("\"Let\'s go!\""))
 21   pow(x,y) == x**y
      pow(x,y,z) == x**y%z
 
-22   
+22   The answer is false when "None", "False", "value is 0" ,"empty".
+(such as "bool(" ") == True" or "bool("") == False")
+
+23   
