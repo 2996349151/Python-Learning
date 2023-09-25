@@ -1,0 +1,7 @@
+5    Variable name can not start with a number.
+
+6    Chinese is allowed to be variable names.
+
+7    Assign two varables to a same value by "x=y=0".
+
+8    Exchange values of two variables by "x, y=y, x".
