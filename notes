@@ -20,7 +20,9 @@
 
 9    Use double quotes can automatically deal with single quotes in string, 
      which is also suitable for using single quotes handling double quotes.
+     Or simple use "\" in front of quotes in string.
 (Such as "print("I'm OK now. Let's go!")" 
-or "print('"Life is short, you need python."')")
+or "print('"Life is short, you need python."')"
+or "print("\"Let\'s go!\""))
 
 10   
