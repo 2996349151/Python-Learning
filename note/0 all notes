@@ -85,4 +85,10 @@ or "print("\"Let\'s go!\""))
 
 24   Operator priority: "lambda" < "if" < "or" < "and" < "not" 
      < "==" < "|" < "^" < "&" < "<<" < "+" < "*,/,//,%,@" < "+x,-x" 
+
+25   Draw flowcharts before programming.
+
+26   
+
+25   
      < "**" < "await" < "x[index]" < "(expressions...)"
