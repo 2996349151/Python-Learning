@@ -25,4 +25,25 @@
 or "print('"Life is short, you need python."')"
 or "print("\"Let\'s go!\""))
 
-10   
+10   Use raw string to ingore the function of "\".
+(such as "print(r"C:\Desktop\Python")")
+
+11   Only when "\" exists in the end can wrapping using "enter". 
+     And using triple quotes can acheive this.
+(such as "print("
+          1            \n\
+        1   1          \n\
+     1    2    1       \n\
+  1    3    3    1     \n\
+)" or "print("""\
+          1            
+        1   1          
+     1    2    1      
+  1    3    3    1     
+""")")
+
+12   Use "+" to connect two string together 
+     or use "*" to repeat a string many times.
+(such as "'520'+'1314'" or ""I love you!\n"*100")
+
+13   
