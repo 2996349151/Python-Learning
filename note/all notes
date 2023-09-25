@@ -51,4 +51,28 @@ or "print("\"Let\'s go!\""))
      unlike integers.
 (can be solved by "x = decimal.Decimal('0.1')")
 
-14   
+14   Use "e" to present extreme large/small number
+(such as "6.36e-34")
+
+15   Complex number is regarded as two float numbers
+(such as "x = 1+5j" or "x.real" or "x.imag")
+
+16   3 // 2 == 1
+     -3 // 2 == -2
+
+17   3 % 2 == 1
+     -3 % 2 == 1
+     -3 % -2 == -1
+
+18   divmod(x,y) == (x//y,x%y)
+
+19   abs(3+4j) == 5
+     complex(3,4) == (3+4j)
+     complex('3+4j') == 3+4j
+
+20   int(9.99) == 9
+
+21   pow(x,y) == x**y
+     pow(x,y,z) == x**y%z
+
+22   
