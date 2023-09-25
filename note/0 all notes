@@ -97,6 +97,4 @@ or "print("\"Let\'s go!\""))
 27   Expressions in "else" (pairing with "while" or "for") will not be executed 
      if "break" is executed.
 
-28   
-
 2023/9/26
