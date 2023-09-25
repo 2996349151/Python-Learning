@@ -1,1 +1,8 @@
+23   "and" and "or" obey short rule, which means from left to right, 
+     only when the first variable cannot get the result, 
+     the second variable will be calculated.
+(such as "3 and 4 == 4" or "0 and -1 == 0" or "3 or 4" == 3)
 
+24   Operator priority: "lambda" < "if" < "or" < "and" < "not" 
+     < "==" < "|" < "^" < "&" < "<<" < "+" < "*,/,//,%,@" < "+x,-x" 
+     < "**" < "await" < "x[index]" < "(expressions...)"
