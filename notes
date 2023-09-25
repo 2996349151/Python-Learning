@@ -1,7 +1,8 @@
 2023/9/25
 
 1    Check whether all punctuation marks are in English form.
-(You can change the font to 'Consolas' by 'IDLE->Options->Configure IDLE->Fonts/Tabs->Font Face->Consolas'.)  
+(You can change the font to 'Consolas' by 
+'IDLE->Options->Configure IDLE->Fonts/Tabs->Font Face->Consolas'.)  
 
 2    Check whether indentation is right.
 
@@ -17,5 +18,9 @@
 
 8    Exchange values of two variables by "x, y=y, x".
 
-9     
+9    Use double quotes can automatically deal with single quotes in string, 
+     which is also suitable for using single quotes handling double quotes.
+(Such as "print("I'm OK now. Let's go!")" 
+or "print('"Life is short, you need python."')")
 
+10   
