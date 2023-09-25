@@ -1,1 +1,9 @@
+1    Check whether all punctuation marks are in English form.
+(You can change the font to 'Consolas' by 
+'IDLE->Options->Configure IDLE->Fonts/Tabs->Font Face->Consolas'.)  
 
+2    Check whether indentation is right.
+
+3    Check whether the spelling of functions and variables is correct.
+
+4    Check all builtin functions by "dir(__builtins__)".
