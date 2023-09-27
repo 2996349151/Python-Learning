@@ -1,1 +1,28 @@
+13   "{}" -> "dict", "{1}" -> "set"
 
+14   "set(x)" will change the amount of every value into 1.
+
+15   x.isdisjoint() (check whether there is any same element)
+     x.issubset() == x <= y
+     x.issuperset() == x >= y
+     x.union() == x | y
+     x.difference() == x - y
+     x.symmetric_difference() == x ^ y
+     x.intersection() == x & y
+
+16   x.update() 
+     x.intersection_update()
+     x.difference_update()
+     x.symmetric_difference_update()
+     x.add()
+(such as "x.update("123") != x.add("123")")
+     x.remove() (return KeyError if not found)
+     x.discard()
+     x.pop() (randomly delete)
+     x.clear()
+
+17   The element in dictionary or set must be hashable, 
+     and in most situations, only unchangable element is hashable.
+(such as "hash(1) == hash(1.0) != hash(1.001)")
+
+18  Searching in set is way too faster than in list.
