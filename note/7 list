@@ -1,1 +1,45 @@
+1    x[0] == x[-len(x)]
+     x[-1] == x[len(x) - 1 ]
 
+2    x[a:b] == [a,b) in x
+     x[start = 0 : end = len(x) : step = 1]
+     x[::-1] == x.reverse()
+
+3    x.append(single object) == x[len(x):] = [single object]
+     x.extend(iterable object) == x[len(x):] = iterable object
+     x.insert(position,element)
+
+4    x.remove(element) (only remove the first one, and error if not found)
+     x.pop(posiiton)
+     x.clear()
+     
+5    x.sort(key = None, reverse = False) 
+     x.reverse() 
+     
+6    x.count(element)
+     x.index(element, start, end) (only return the first one)
+
+7    x.copy() == x[:]
+
+8    x + y == x.extend(y)
+     x * 3 == x.extend(x + x)
+     [x, y] == x, y
+     x, y, *z = [1, 2, 3, 4, 5] == x = 1, y = 2, z = [3, 4, 5]
+
+9    for i in range(3): A[i] = [0] * 3 != B = [[0] * 3] * 3
+(A[0] is A[1] == False and B[0] is B[1] == True)
+
+10   "=" transfer the reference, not the value.
+(y = x[:]) != y = x)
+
+11   "copy()" or "[:]" are only the shallow copy, which cannot handle nested list,
+     which deep copy can handle.
+(such as "y = copy.deepcopy(x)")
+
+12   List comprehension expression: [expression for target in iterable if condition],
+     which is also regarded as deep copy.
+(such as "[float(i) * 5 for i in range(10)] if i % 3 != 0" or
+"[col for row in matrix if row != [] for col in row if col != 0 ]" or
+"[x + y for x in X for y in Y]")
+
+13   List in tuple can be revised.
