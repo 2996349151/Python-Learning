@@ -97,4 +97,148 @@ or "print("\"Let\'s go!\""))
 27   Expressions in "else" (pairing with "while" or "for") will not be executed 
      if "break" is executed.
 
+
 2023/9/26
+
+1    x[0] == x[-len(x)]
+     x[-1] == x[len(x) - 1 ]
+
+2    x[a:b] == [a,b) in x
+     x[start = 0 : end = len(x) : step = 1]
+     x[::-1] == x.reverse()
+
+3    x.append(single object) == x[len(x):] = [single object]
+     x.extend(iterable object) == x[len(x):] = iterable object
+     x.insert(position,element)
+
+4    x.remove(element) (only remove the first one, and error if not found)
+     x.pop(posiiton)
+     x.clear()
+     
+5    x.sort(key = None, reverse = False) 
+     x.reverse() 
+     
+6    x.count(element)
+     x.index(element, start, end) (only return the first one)
+
+7    x.copy() == x[:]
+
+8    x + y == x.extend(y)
+     x * 3 == x.extend(x + x)
+     [x, y] == x, y
+     x, y, *z = [1, 2, 3, 4, 5] == x = 1, y = 2, z = [3, 4, 5]
+
+9    for i in range(3): A[i] = [0] * 3 != B = [[0] * 3] * 3
+(A[0] is A[1] == False and B[0] is B[1] == True)
+
+10   "=" transfer the reference, not the value.
+(y = x[:]) != y = x)
+
+11   "copy()" or "[:]" are only the shallow copy, which cannot handle nested list,
+     which deep copy can handle.
+(such as "y = copy.deepcopy(x)")
+
+12   List comprehension expression: [expression for target in iterable if condition],
+     which is also regarded as deep copy.
+(such as "[float(i) * 5 for i in range(10)] if i % 3 != 0" or
+"[col for row in matrix if row != [] for col in row if col != 0 ]" or
+"[x + y for x in X for y in Y]")
+
+13   List in tuple can be revised.
+
+14   String is unchangable, so all builtin functions will return a new string.
+
+15   x.capitalize() == "i LOVE you" -> "I love You"
+     x.casefold() == "I LOVE you" -> "i love you"
+     x.title() == "i LOVE you" -> "I Love You"
+     x.swapcase() == "I LOVE you" -> "i love YOU"
+     x.upper() == "i LOVE you" -> "I LOVE YOU"
+     x.lower() == "i LOVE you" -> "i love you" (can only handle English)
+
+16   "a".center(3, 0) == " 0a0"
+     "a".ljust(3, "b") == "abb"
+     "a".rjust(3, "c") == "cca"
+     "-5".zfill(5)" == "-0005"
+
+17   x.count() 
+     x.find() (return -1 if not found)
+     x.rfind() (find the last one)
+     x.index()
+     x.rindex()
+  
+18   Never use tab and space at the same code.
+ 
+19   x.expandtabs(length) (replace all tabs with certain length)
+     x.replace(old, new, count = -1)
+     x.translate(table) (table is made by str.maketrans(old, new, erase))
+
+20   x.startswith(target, start, end) (target can be a iterable object)
+     x.endswith(target, start, end)
+     x.istitle()
+     x.isupper() ("x.upper().isupper" is always True)
+     x.islower()
+     x.isalpha() (space is not aplpha)
+     x.isspace() ("\n" or others are also regarded as space)
+     x.isprintable() ("\n" or others are not printable)
+     x.isdecimal() 
+     x.isdigit()
+     x.isnumeric()
+     x.isalnum()
+     x.isidentifier()
+     keyword.iskeyword(x)
+
+21   x.lstrip(chars = None) (match every single character to remove)
+     x.rstrip()
+     x.strip()
+     x.removeprefix(chars) (match the string to remove)
+     x.removesuffix(chars)
+     
+22   x.partiotion(char) (split it into three parts: left, char, right, 
+     find char from left to right)
+     x.rpartition(char)
+     x.split(sep = None, maxsplit = -1)
+     x.rsplit(sep = None, maxsplit = -1)
+     
+23   "line break" is different in different OS, so use "x.splitlines()".
+
+24   x.join(iterable object) (use x to connect all, really fast)
+     
+25   Use of string format:
+(such as ""1 + 2 = {}".format(1 + 2)"
+""1 + 2 = {1}, 1 * 2 = {0}".format(1 * 2, 1 + 2)"
+""1 + 2 = {0}, 1 * 2 = {ans}".format(1 + 2, ans = 1 * 2)")
+     format: [[fill]align][sign][#][0][width][grouping_option][.precision][type]
+     "align":"<, >, =, ^"
+     "width": the total length 
+     "0": use "0" to fullfill the space (the object must be number)
+     "fill":  fullfill the space (whose priority is higher than "0")
+     "sign": "+, -" or " "
+     "grouping_option": "," or "_"
+     ".precision": for "f": how many digits after "."
+                   for "g": how many digits in total
+                   for none-number: maximun length of object
+     "#": show the kind of decimal system
+     "type": "b": 
+             "c": unicode
+             "d":
+             "o":
+             "x" or "X":
+             "n" == "d" with separator 
+             None == "d"   
+             "e" or "E":
+             "f" or "F":
+             "g" or "G": small number == "f", big number == "e"
+             "n" == "f" with separator
+             "%" == 'f' with "%"
+             None == "f"
+     (these can be replaced by a "{corresponding name}" and value it in "format()")
+(such as ""{0:.{prec}f}".format(3.1415, prec = 2)")
+
+26   Use of f-string: (only in version later than Python 3.6)
+     f"{1+2}" == "{}".format(1+2)
+     f"{-520:010}" == "{:010}".format(-520)
+
+
+2023/9/27
+
+1    
