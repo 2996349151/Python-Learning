@@ -241,4 +241,93 @@ or "print("\"Let\'s go!\""))
 
 2023/9/27
 
-1    
+1    List, tuple and string are sequence, which can use "index", "slice",
+     and "+, *".
+
+2    Every variable has three parameters, "id" (never change since created),      
+     "type" and "value".
+
+3    "is" is the true for same number or tuple, in that they are  
+     unchangable, and is false when facing same list.
+
+4    "in" is to find whether a element is in a sequence.
+
+5    "del"  can either delete a sequence or a element in a sequence.
+(such as "del x[1:3] == x[1:3] = []"
+or "del x[::2] != x[::2] == []"
+or "del x[:] == x.clear()")
+
+6    min(iterable, default="ValueError")
+     max()
+     len() (the max length is 2 ** 64 - 1)
+     sum()
+     sorted(iterable, key = None, reverse = False) (return a list)
+(such as "sorted(x, key = len)")
+     reversed() (return a reverse iterator)
+     
+7    all() (judge whether every element is true)
+     any() (judge whether any element is true)
+     list(enumerate(,start-index = 0)) 
+     (return a list with each element like "(index, value)")
+     zip() 
+(such as "list(zip([1,2,3],[4,5])) == [(1,4),(2,5)]"
+or "itertools.zip_longest([1,2,3],[4,5]) == [(1,4),(2,5),(3,None)]")
+     map(function, iterable)
+(such as "list(map(ord, "Iloveyou")) == [73,108,111,118,101,121,111,117]"
+or "list(map(pow,[3,2],[3,4])) == [27,16]")
+     filter(function, iterable) (return element haveing true result)
+(such as "list(filter(str.islower,"AbcD") == ["b","c"]")
+
+8    Iterable object can be used as many times as you want, but iterator     
+     can only be used once.
+(use "iter()" to create a iterator and 
+use "next(iterator)" to visit all elements in iterator)
+
+9    {"x":1,"y":2} == dict(x=1,y=2) == dict([("x",1),("y",2)]) == 
+     dict(zip(["x","y"],[1,2]))
+     dict.fromkeys("xyz",1) == {"x":1,"y":1,"z":1}
+
+10   x.pop(key,default = KeyError)
+     x.popitem() (delete a item randomly)
+     del x[key]
+     
+11   x[key] = value == x.update(key=value)
+(such as "x['a'] = 1 == x.update(a = 1)")
+     x.get(key, default = KeyError)
+     x.setdefault(key, default= value) (if not found, set default value)
+     x.items() (will change with the change of "x")
+     x.key() (will change with the change of "x")
+     x.value() (will change with the change of "x")
+     x.copy()
+
+12   Use of dictionary comprehension expression:
+     "y = {value:key for key,value in x.items() if value>100}"
+
+13   "{}" -> "dict", "{1}" -> "set"
+
+14   "set(x)" will change the amount of every value into 1.
+
+15   x.isdisjoint() (check whether there is any same element)
+     x.issubset() == x <= y
+     x.issuperset() == x >= y
+     x.union() == x | y
+     x.difference() == x - y
+     x.symmetric_difference() == x ^ y
+     x.intersection() == x & y
+
+16   x.update() 
+     x.intersection_update()
+     x.difference_update()
+     x.symmetric_difference_update()
+     x.add()
+(such as "x.update("123") != x.add("123")")
+     x.remove() (return KeyError if not found)
+     x.discard()
+     x.pop() (randomly delete)
+     x.clear()
+
+17   The element in dictionary or set must be hashable, 
+     and in most situations, only unchangable element is hashable.
+(such as "hash(1) == hash(1.0) != hash(1.001)")
+
+18  Searching in set is way too faster than in list.
