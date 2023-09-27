@@ -1,1 +1,19 @@
+9    {"x":1,"y":2} == dict(x=1,y=2) == dict([("x",1),("y",2)]) == 
+     dict(zip(["x","y"],[1,2]))
+     dict.fromkeys("xyz",1) == {"x":1,"y":1,"z":1}
 
+10   x.pop(key,default = KeyError)
+     x.popitem() (delete a item randomly)
+     del x[key]
+     
+11   x[key] = value == x.update(key=value)
+(such as "x['a'] = 1 == x.update(a = 1)")
+     x.get(key, default = KeyError)
+     x.setdefault(key, default= value) (if not found, set default value)
+     x.items() (will change with the change of "x")
+     x.key() (will change with the change of "x")
+     x.value() (will change with the change of "x")
+     x.copy()
+
+12   Use of dictionary comprehension expression:
+     "y = {value:key for key,value in x.items() if value>100}"
