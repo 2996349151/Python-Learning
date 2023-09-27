@@ -1,1 +1,41 @@
+1    List, tuple and string are sequence, which can use "index", "slice",
+     and "+, *".
 
+2    Every variable has three parameters, "id" (never change since created),      
+     "type" and "value".
+
+3    "is" is the true for same number or tuple, in that they are  
+     unchangable, and is false when facing same list.
+
+4    "in" is to find whether a element is in a sequence.
+
+5    "del"  can either delete a sequence or a element in a sequence.
+(such as "del x[1:3] == x[1:3] = []"
+or "del x[::2] != x[::2] == []"
+or "del x[:] == x.clear()")
+
+6    min(iterable, default="ValueError")
+     max()
+     len() (the max length is 2 ** 64 - 1)
+     sum()
+     sorted(iterable, key = None, reverse = False) (return a list)
+(such as "sorted(x, key = len)")
+     reversed() (return a reverse iterator)
+     
+7    all() (judge whether every element is true)
+     any() (judge whether any element is true)
+     list(enumerate(,start-index = 0)) 
+     (return a list with each element like "(index, value)")
+     zip() 
+(such as "list(zip([1,2,3],[4,5])) == [(1,4),(2,5)]"
+or "itertools.zip_longest([1,2,3],[4,5]) == [(1,4),(2,5),(3,None)]")
+     map(function, iterable)
+(such as "list(map(ord, "Iloveyou")) == [73,108,111,118,101,121,111,117]"
+or "list(map(pow,[3,2],[3,4])) == [27,16]")
+     filter(function, iterable) (return element haveing true result)
+(such as "list(filter(str.islower,"AbcD") == ["b","c"]")
+
+8    Iterable object can be used as many times as you want, but iterator     
+     can only be used once.
+(use "iter()" to create a iterator and 
+use "next(iterator)" to visit all elements in iterator)
