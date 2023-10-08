@@ -331,3 +331,78 @@ use "next(iterator)" to visit all elements in iterator)
 (such as "hash(1) == hash(1.0) != hash(1.001)")
 
 18  Searching in set is way too faster than in list.
+
+
+2023/10/8
+
+1    Function will return "None" in the end.
+
+2    Use keyword paramters to assign parameters by "name = value", 
+
+3    Positional paramters must be in front of the keyword paramters.
+
+4    Default parameters must be behind the undefault parameters.
+
+5    "def fun(a,b,/,c)" means that parameters on the left of "/"
+     must be positional parameters.
+
+6    "def fun(a,b,*,c)" means that parameters on the right of "*"
+     must be keyword parameters, 
+     and the parameters behind the collective parameters
+     must be assigned using keyword.
+
+7    Use collective parameters to assign uncertain number of value,
+     which is a tuple. 
+(such as "def fun(*args)")
+
+8    Return a tuple if a function returns multiple values.
+
+9    "def fun(**a)" means "a" is a dictionary with collective and keyword feature.
+
+10   Use unpack parameters to assign multiple parameters.
+(such as "def fun(a) ##  x = (1,2,3) ## fun(*x)")  
+
+11   Use "global" to define or revise a global parameters in a function,
+     which is not recommended.
+
+12   Use "nonlocal" to revise a parameters of a function in an inner function.
+
+13   "LEGB" means "Local" > "Enclosed" > "Global" > "Built-In" parameters.
+
+14   A function without parentheses can be a return value.
+
+15   Use closures function to memorise some parameters.
+
+16   A function can also be an input parameter of a fucntion.
+
+17   Use decorator to achieve more functions without revising original codes.
+
+18   The order of multiple decorators is from bottom to top.
+
+19   "lambda arg1, arg2, ... : expression", which can be put in list, map.
+(such as "lambda x: x * x",
+"lambda ")
+
+20   Use generator "yield" to remain the result of a function. 
+     (the function stops at "yield", and execute next sentence in next call of this function)
+
+21   Generator expression is similar to list expression, 
+     the difference is that generator expression will output a result with a call, 
+     and list expression will output all results in one call.
+
+22   Recursion costs much more complex calculation.
+
+23   Notes on functions can be written as:
+     "def times(s:list[str] = "a", n:int = 1) -> dict[str, int]:"
+
+24   Function's content:
+     "func.__name__"
+     "func.__annotation__"
+     "func.__doc__"
+
+25   The function using functions as paramters is called high order function.
+
+26   "functools.reduce(func, iterable)" == "transfer all value into func one by one"
+(such as "functools.reduce(lambda x,y:x*y, range(1,11))")
+     "functools.partial(pow, exp=3)(2)" == "2 ** 3"
+     
