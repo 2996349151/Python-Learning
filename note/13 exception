@@ -1,1 +1,18 @@
+4    handle exception:
+"""
+try:
+    expression
+except (ZeroDivisionError, ValueError) as e:
+    expression
+except TypeError:
+    pass
+else:
+    expression
+finally:
+    expression
+"""
 
+5    "raise ValueError("Explanation")"
+     "assert Expression" == AssertionError if False
+
+6    Use "raise" nothing can skip left content in "try".
