@@ -1,1 +1,45 @@
+1    Create or open file: "f = open(file, mode="w")" 
+                          == "with open(file, "w") as f:"
 
+2    Basic operations on file object:
+     "f.write(text)" == single string
+     "f.writelines(lines)" == multiple strings (without "\n")
+     "f.close()" == save and confirm operations
+     "f.flush" == save without closing the file object
+     "f.readable()"
+     "f.writable()"
+     "f.tell()" == find the position of file pointer
+     "f,seek(offset)" == change the position of the file pointer
+     "f.read(size)" == size of characters
+     "f.readline()" == read a line, including "\n"
+     "f.truncate(pos)" == truncate the file at given position
+
+3    Basic operations on file path:
+     ("from pathlib import Path")
+     "Path.cwd()"
+     "p = Path(path)" == create a path object
+     "q = p / "path"" == add path behind 
+     "p.is_dir()"
+     "p.is_file()"
+     "p.exists()"
+     "p.name" == last part of the path
+     "p.stem" == get the name of the file
+     "p.suffix" == get the suffix of the file
+     "p.parent" == get the path of the parent directory
+     "p.parents" == a iterable object collecting all parent directories from close to far
+     "p.parts" == part the path into tuple
+     "p.stat()"
+     "p.resolve()" == change relative path into absolute path
+     "p.iterdir()" == a generator collecting all file or path in current path
+     "p.mkdir(exist_ok = False, parents = False)"
+     "p.open()"
+     "p.rename(name)"
+     "p.rmdir()" == remove empty directory
+     "p.unlink()" == remove file
+     "p.glob("**/*.txt") = find all with ".txt"
+
+4    Other operations on file:
+     (with open(file, "wb") as f)
+     "pickle.dump(x, f)"A
+     (with open(file, "rb") as f)
+     "pickle.load(x, f)"
