@@ -1,1 +1,30 @@
 7    Must write "self" input in all functions in "class".
+
+1    The type can access to everything inherited from its parent,
+     except those redefined in A.
+
+2    Use "isinstance(object, type)" to tell whether the type is right.
+     Use "issubclass(A, B)" to tell whether A is subclass of B.
+
+3    For multiple inheriting, the left parent will cover the right parent.
+
+4    "self" in "class" is its self, which is used to bind object.
+
+5    Use "super" to avoid diamond inheritation. (based on MRO)
+
+1    Private vairable cannot be accessed by directly calling.
+
+2    "__slots__" is to restrict adding attributes.
+
+3    Simple operations on attributes:
+     "hasattr(object, attribute)"
+     "getattr(object, attribute)" == "object.attribute"
+     "setattr(object, attribute, value)"
+     "delattr(object, attribute)"
+
+4    "x[2:6]" == "x[slice(2,6)]"
+     "x[1:]" == "x[slice(1,None)]"
+     "x[::4]" == "x[slice(None,None,4)]"
+
+1    If a class doesn't have "__contains__", it will use "__iter__" and "__next__" to visit all elements. 
+     (if these two are also umplenmented, it will use "_getitem_")
