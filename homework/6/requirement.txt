@@ -1,0 +1,47 @@
+### database
+
+- 安装linux虚拟机 ubuntu
+
+- 安装mysql数据库 
+
+- windows安装mysql客户端（可选：navicat）
+
+- 将mysql数据库开启远程登录模式（windows用户可以访问linux主机的mysql）
+
+- 创建数据库和表（t_student)
+  student参考数据内容：
+
+  ```
+  {id: 1, name: '张三', gender: '男', age: 18, grade: '一年级', enrollmentDate: '2021-09-01'},
+  {id: 2, name: '李四', gender: '女', age: 19, grade: '二年级', enrollmentDate: '2020-09-01'},
+  {id: 3, name: '王五', gender: '男', age: 20, grade: '三年级', enrollmentDate: '2019-09-01'},
+  ```
+
+### frontend
+
+- 安装node.js 
+- 安装react
+
+### backend
+
+- 安装flask
+- 编写后端服务
+
+
+
+axios js向后端发送请求的小组件
+
+post/put/get/delete 
+
+HTTP协议，超文本传输协议，
+
+7层模型 IOS 
+
+TCP/IP模型 链路层、网络层、传输层、应用层（HTTP）
+
+面向连接的传输层协议
+
+UDP 面向无连接
+
+postman 测试后端服务
+curl工具
